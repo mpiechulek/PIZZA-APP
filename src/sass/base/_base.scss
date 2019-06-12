@@ -2,16 +2,11 @@
 @import "variables";
 
 body {
-    background-color: $bg-color;
+    background-image: url("../img/dark_wood.png");
+    background-color: $color-1;
     box-sizing: border-box;
     position: relative;
     min-width: 260px;
-
-	background:
-		linear-gradient(90deg, $bg-color ($bg-dot-space - $bg-dot-size), transparent 1%) center,
-		linear-gradient($bg-color ($bg-dot-space - $bg-dot-size), transparent 1%) center,
-		$bg-dot-color;
-	    background-size: 3rem 3rem;
 }
 
 *,

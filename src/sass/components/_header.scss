@@ -1,0 +1,22 @@
+@import "./base/mixins";
+@import "./base/variables";
+
+.header {
+    background-image: url("../img/baked-beer-cheese-724216.jpg");
+    background-color: $color-1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 40vh;
+    width: 100%;
+
+    &-1{
+        position: relative;
+        display:inline-block;
+        font-family: 'Pacifico', cursive;
+        text-shadow: 5px 5px #000000;
+        font-size: $fontsize-header-1;
+        top: 8rem;
+        left: 8rem;
+    }
+}

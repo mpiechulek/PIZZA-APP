@@ -1,0 +1,28 @@
+@import "./base/variables";
+
+.explanation {
+    position: absolute;
+    top:6vh;
+    right: 6vw;
+
+    &_open-button {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        border:none;
+        background-color: $color-4;
+        font-size: $fontsize-header-2;
+        color:$color-5;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+
+        &_header-2{
+            display: block;
+            @include absCenetr;
+        }
+    }
+
+    &_open-button:hover{
+        background-color: $color-3;
+    }
+}

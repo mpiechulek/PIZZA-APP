@@ -1,10 +1,10 @@
 @import "variables";
 
 body {
-    font-family: 'Changa', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
-    color:#eeeeee;;
+    color: $color-5;
     line-height: 1.5;
     word-spacing: .5rem;
     letter-spacing: .5rem;
@@ -12,16 +12,20 @@ body {
 
 .header-1 {
     font-family: 'Monoton', cursive;
-    font-size: $header-h1-font-size;
+    font-size: $fontsize-header-1;
     word-spacing: 2rem;
     font-weight: 400;
 }
 
+.header_2 {
+    font-size: $fontsize-header-2;
+}
+
 .header_3 {
-    margin: $marginbottom-small 0;
+    font-size: $fontsize-header-3;
+    margin-bottom: $marginbottom-small ;
 }
 
 .paragraph {
-    font-size:$paragraph-font-size;
-    margin-bottom: $marginbottom-medium;
+    margin-bottom: 1.5rem;
 }

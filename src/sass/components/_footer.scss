@@ -1,0 +1,19 @@
+
+.footer {
+    background-color: #702424;
+    position:relative;
+    width:100%;
+    height:auto;
+
+    &_wrapper{
+        display:block;
+        padding: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    &_paragraph {
+        margin-bottom: 2rem;
+    }
+}
