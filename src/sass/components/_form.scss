@@ -1,4 +1,4 @@
-.form{
+.form {
     margin: 4rem 0;
     position: relative;
     display: flex;
@@ -11,7 +11,7 @@
         align-items: center;
     }
 
-    ///////////////////////////////////////////////////////
+    //=========================================================================
 
     &_buttons {
         display: flex;
@@ -40,14 +40,20 @@
             @include respond(tab-land){
                 margin: 1rem;
             }
-
         }
 
         &_button:hover{
             background-color: $color-3;
+
+            @include respond(tab-land){
+                &:hover{
+                    background-color: $color-4;
+                }
+            }
         }
     }
-    //////////////////////////////////////////////////////////////
+
+    //============================Grid display=================================
 
     &_inputs {
          display: grid;
@@ -86,6 +92,7 @@
 
                 @include respond(tab-land){
                    font-size: 2.3rem;
+                   width: 8.5rem;
                 }
             }
 
@@ -93,6 +100,8 @@
                 background-color: $color-2;
             }
     }
+
+    //============================Grid display=================================
 
     &_inputs-2 {
          display: grid;
@@ -110,10 +119,16 @@
 
          @include respond(phone){
             width:90%;
+            grid-template-columns: repeat(2 ,1fr);
+            grid-template-rows: repeat(5 ,1fr);
          }
 
         .input-text {
             width:18rem;
+            @include respond(tab-land){
+               font-size: 2.3rem;
+               width: 22rem;
+            }
         }
 
          .grid-1 {
@@ -121,6 +136,13 @@
              grid-row-end: 3;
              grid-column-start: 1;
              grid-column-end: 2;
+
+             @include respond(phone){
+                 grid-row-start: 1;
+                 grid-row-end: 2;
+                 grid-column-start: 1;
+                 grid-column-end: 2;
+             }
          }
 
          .grid-2 {
@@ -128,6 +150,13 @@
              grid-row-end: 3;
              grid-column-start: 2;
              grid-column-end: 3;
+
+             @include respond(phone){
+                 grid-row-start: 1;
+                 grid-row-end: 2;
+                 grid-column-start: 2;
+                 grid-column-end: 3;
+             }
          }
 
          .grid-3 {
@@ -135,6 +164,13 @@
              grid-row-end: 4;
              grid-column-start: 1;
              grid-column-end: 2;
+
+             @include respond(phone){
+                 grid-row-start: 2;
+                 grid-row-end: 3;
+                 grid-column-start: 1;
+                 grid-column-end: 2;
+             }
          }
 
          .grid-4 {
@@ -142,6 +178,13 @@
              grid-row-end: 4;
              grid-column-start: 2;
              grid-column-end: 3;
+
+             @include respond(phone){
+                 grid-row-start: 2;
+                 grid-row-end: 3;
+                 grid-column-start: 2;
+                 grid-column-end: 3;
+             }
          }
 
          .grid-5 {
@@ -149,6 +192,13 @@
              grid-row-end: 3;
              grid-column-start: 3;
              grid-column-end: 4;
+
+             @include respond(phone){
+                 grid-row-start: 3;
+                 grid-row-end: 4;
+                 grid-column-start: 1;
+                 grid-column-end: 2;
+             }
          }
 
          .grid-6 {
@@ -156,6 +206,13 @@
              grid-row-end: 3;
              grid-column-start: 4;
              grid-column-end: 5;
+
+             @include respond(phone){
+                 grid-row-start: 3;
+                 grid-row-end: 4;
+                 grid-column-start: 2;
+                 grid-column-end: 3;
+             }
          }
 
          .grid-7 {
@@ -163,6 +220,13 @@
              grid-row-end: 4;
              grid-column-start: 3;
              grid-column-end: 4;
+
+             @include respond(phone){
+                 grid-row-start: 4;
+                 grid-row-end: 5;
+                 grid-column-start: 1;
+                 grid-column-end: 2;
+             }
          }
 
          .grid-8 {
@@ -170,6 +234,13 @@
              grid-row-end:4;
              grid-column-start: 4;
              grid-column-end:5;
+
+             @include respond(phone){
+                 grid-row-start: 4;
+                 grid-row-end: 5;
+                 grid-column-start: 2;
+                 grid-column-end: 3;
+             }
          }
     }
 }
