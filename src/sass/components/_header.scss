@@ -7,8 +7,17 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
+    position: relative;
     height: 40vh;
     width: 100%;
+
+    @include respond(medium-desktop){
+        height: 35vh;
+    }
+
+    @include respond(tab-land){
+        height: 30vh;
+    }
 
     &-1{
         position: relative;
