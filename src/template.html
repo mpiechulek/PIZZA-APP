@@ -10,13 +10,11 @@
     </head>
 
     <body>
-
         <header class="header">
             <h1 class="header-1">Pizza App</h1>
         </header>
 
         <main class="main">
-
             <form  class="form">
                 <div class="form_buttons">
                     <button class="form_buttons_button add" id="button-submit" type= "button">ADD</button>
@@ -24,86 +22,38 @@
                 </div>
 
                 <div class="form_inputs">
-                    <label class="form_inputs_label"></label>
-                    <label class="form_inputs_label">S</label>
-                    <label class="form_inputs_label">M</label>
-                    <label class="form_inputs_label">L</label>
+                    <label class="form_inputs_label grid-11">Size [cm]</label>
+                    <input class="form_inputs_input grid-22" id= "size" type="tel">
 
-                    <label class="form_inputs_label">Size</label>
-                    <input class="form_inputs_input" id= "size-small" type="tel">
-                    <input class="form_inputs_input" id= "size-medium" type="tel">
-                    <input class="form_inputs_input" id= "size-large" type="tel">
-
-                    <label class="form_inputs_label">Price</label>
-                    <input class="form_inputs_input" id= "price-small" type="tel">
-                    <input class="form_inputs_input" id= "price-medium" type="tel">
-                    <input class="form_inputs_input" id= "price-large" type="tel">
+                    <label class="form_inputs_label grid-33">Price</label>
+                    <input class="form_inputs_input grid-44" id= "price" type="tel">
                 </div>
 
-                <div class="form_inputs-2">
-                    <label class = "form_inputs_label grid-1">Persones</label>
-                    <input class="form_inputs_input grid-2" id="persones" value ="1" type="tel">
+                <div class="form_inputs">
+                    <label class = "form_inputs_label grid-11">People</label>
+                    <input class="form_inputs_input grid-22" id="people" value ="1" type="tel">
 
-                    <label class = "form_inputs_label grid-3">Slicing</label>
-                    <input class="form_inputs_input grid-4" id="slicing" value ="8" type="tel">
-
-                    <label class = "form_inputs_label grid-5">Local name</label>
-                    <input class="form_inputs_input grid-6 input-text" id="local-name" type="text">
-
-                    <label class = "form_inputs_label grid-7">Pizza name</label>
-                    <input class="form_inputs_input grid-8 input-text" id="pizza-name" type="text">
+                    <label class = "form_inputs_label grid-33">kcal/perosne</label>
+                    <input class="form_inputs_input grid-44" id="calories" value ="1000" type="tel">
                 </div>
 
+                <div class="form_inputs">
+                    <label class = "form_inputs_label grid-11">Local name</label>
+                    <input class="form_inputs_input grid-22 input-text" id="local-name" type="text">
+
+                    <label class = "form_inputs_label grid-33">Pizza name</label>
+                    <input class="form_inputs_input grid-44 input-text" id="pizza-name" type="text">
+                </div>
             </form>
 
-            <!-- <div class = "explanation">
-                <button class="explanation_open-button"><h2 class = "explanation_open-button_header-2">?</h2></button>
-            </div> -->
+            <div class="warning">
+                <p class="paragraph paragraph_red" id="warning"></p>
+            </div>
 
             <div class="gallery">
                 <div class="gallery_wrapper">
 
-                    <div class="gallery_wrapper_element">
-                        <label class = "gallery_wrapper_element_card-btn" id ="card-btn">X</label>
-                        <h3 class="header_3" id="card">Best Pizza</h3>
-                        <p class="paragraph" id="par1">Peperoni pizza</p>
-                        <p class="paragraph" id="par1">2 Large</p>
-                        <p class="paragraph" id="par1">1 Medium</p>
-                        <p class="paragraph" id="par1">Price 100</p>
-                        <p class="best-offer" id="par1">BEST OFFER</p>
-                    </div>
-
-                    <div class="gallery_wrapper_element">
-                        <label class = "gallery_wrapper_element_card-btn" id ="card-btn">X</label>
-                        <h3 class="header_3" id="card">Best Pizza</h3>
-                        <p class="paragraph" id="par1">Peperoni pizza</p>
-                        <p class="paragraph" id="par1">2 Large</p>
-                        <p class="paragraph" id="par1">1 Medium</p>
-                        <p class="paragraph" id="par1">Price 100</p>
-                        <p class="best-offer" id="par1">BEST OFFER</p>
-                    </div>
-
-                    <div class="gallery_wrapper_element">
-                        <label class = "gallery_wrapper_element_card-btn" id ="card-btn">X</label>
-                        <h3 class="header_3" id="card">Best Pizza</h3>
-                        <p class="paragraph" id="par1">Peperoni pizza</p>
-                        <p class="paragraph" id="par1">2 Large</p>
-                        <p class="paragraph" id="par1">1 Medium</p>
-                        <p class="paragraph" id="par1">Price 100</p>
-                        <p class="best-offer" id="par1">BEST OFFER</p>
-                    </div>
-
-                    <div class="gallery_wrapper_element">
-                        <label class = "gallery_wrapper_element_card-btn" id ="card-btn">X</label>
-                        <h3 class="header_3" id="card">Best Pizza</h3>
-                        <p class="paragraph" id="par1">Peperoni pizza</p>
-                        <p class="paragraph" id="par1">2 Large</p>
-                        <p class="paragraph" id="par1">1 Medium</p>
-                        <p class="paragraph" id="par1">Price 100</p>
-                        <p class="best-offer" id="par1">BEST OFFER</p>
-                    </div>
-
-                    <div class="gallery_wrapper_element">
+                    <div class="gallery_wrapper_element" id="xxx">
                         <label class = "gallery_wrapper_element_card-btn" id ="card-btn">X</label>
                         <h3 class="header_3" id="card">Best Pizza</h3>
                         <p class="paragraph" id="par1">Peperoni pizza</p>
@@ -125,7 +75,6 @@
 
                 </div>
             </div>
-
         </main>
 
         <footer class= "footer">
@@ -135,6 +84,5 @@
                 <p class="footer_paragraph">Photo by Fancycrave.com from Pexels</p>
             </div>
         </footer>
-
     </body>
 </html>

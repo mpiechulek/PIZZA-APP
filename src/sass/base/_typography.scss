@@ -28,4 +28,8 @@ body {
 
 .paragraph {
     margin-bottom: 1.5rem;
+
+    &_red {
+        color:red;
+    }
 }
