@@ -5,8 +5,8 @@ import { clearInputs } from "./clear.js";
 
 let localName,
     pizzaName,
-    sizeSmall,
-    priceSmall,
+    size,
+    price,
     peopleCount,
     callPerPerosne,
     id;
