@@ -9,8 +9,7 @@ let localName,
     priceSmall,
     peopleCount,
     callPerPerosne,
-    id,
-    trash;
+    id;
 
 let newPizza;
 let itemList = [];
@@ -18,7 +17,6 @@ let itemList = [];
 // ==============================Get data from inputs===========================
 
 id = 0;
-trash = false;
 
 export const getInputs = () => {
 
@@ -43,7 +41,6 @@ function Pizza(localName, pizzaName, size, price, peopleCount, callPerPerosne, i
     this.peopleCount = peopleCount;
     this.callPerPerosne = callPerPerosne;
     this.id = id;
-    this.trash = trash;
     this.pizzaCallAmmout = function() {
 
         if (this.size >= 20 && this.size < 23) {
@@ -119,11 +116,31 @@ function peopleRound() {
     return peopleCount;
 }
 
+function pizzaBargain() {
+    let pizzaCall;
+    let pizzaCount = 1;
+    let pizzaCallTotal;
+    let pizzaPriceTotal;
+    let totalCallDeclared;
+    pizzaCallTotal = pizzaCall;
+
+    while (pizzaCallTotal > totalCallDeclared) {
+        pizzaCallTota = pizzaCallTota + pizzaCall;
+        pizzaCount++;
+    }
+
+    pizzaPriceTotal = pizzaCount * pizzaPrice;
+    return pizzaCallTota, pizzaPriceTotal, pizzaCount;
+}
+
+
 // removing an intem form the item lisyt, by id
 function removeItem(element) {
     element.parentNode.parentNode.removeChild(element.parentNode);
-    itemList[element.id].trash = true;
+    itemList.splice(itemList[element.id], 1);
+    console.log(element);
 }
+
 
 // ==============================New Pizza======================================
 
@@ -138,12 +155,16 @@ const start = () => {
         console.log(condition);
 
         if (condition) {
-            id = itemList.length;
-            newPizza = new Pizza(localName, pizzaName, size, price, peopleCount, callPerPerosne, id, trash);
+            newPizza = new Pizza(localName, pizzaName, size, price, peopleCount,
+                callPerPerosne, id);
+
             itemList.push(newPizza);
+
+            console.log(itemList);
+
             addItem(newPizza.localName, newPizza.pizzaName, newPizza.size,
                 newPizza.id, newPizza.localName, newPizza.localName);
-            console.log(itemList);
+            id++;
         }
 
         // clearInputs();
@@ -162,11 +183,11 @@ const start = () => {
         clearInputs();
     });
 
-    const gallery = document.querySelector('.gallery_wrapper_element_card-btn');
+    const card = document.querySelector('.gallery_wrapper');
 
-    gallery.addEventListener('click', function(event) {
+    card.addEventListener('click', function(event) {
         let element = event.target;
-        console.log(element);
+        console.log(event.target);
         const elementJOB = event.target.attributes.job.value;
 
         if (elementJOB == "delete") {

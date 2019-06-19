@@ -5,7 +5,7 @@ const position = document.querySelector('.gallery_wrapper');
 export const addItem = (localName, pizzaName, size, id, ammount, calls, price, bestOffer) => {
 
     let content = `<div class="gallery_wrapper_element " id=${id}>
-                        <label class = "gallery_wrapper_element_card-btn" id ="${id}">X</label>
+                        <label class = "gallery_wrapper_element_card-btn" job="delete" id ="${id}">X</label>
                         <h3 class="header_3">${localName}</h3>
                         <p class="paragraph">${pizzaName}</p>
                         <br>
@@ -18,7 +18,3 @@ export const addItem = (localName, pizzaName, size, id, ammount, calls, price, b
     // Insert the HTML into the DOM
     position.insertAdjacentHTML('beforeend', content);
 };
-
-// export const removeItem = (id) => {
-//     id.remove();
-// };
