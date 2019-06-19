@@ -1,6 +1,6 @@
 //jshint esversion:6
 
-import { addItem, removeItem } from "./card.js";
+import { addItem } from "./card.js";
 import { clearInputs } from "./clear.js";
 
 let localName,
@@ -12,7 +12,8 @@ let localName,
     id,
     trash;
 
-var newPizza;
+let newPizza;
+let itemList = [];
 
 // ==============================Get data from inputs===========================
 
@@ -72,8 +73,10 @@ function Pizza(localName, pizzaName, size, price, peopleCount, callPerPerosne, i
     };
 }
 
-// ==============================Filtering data======================================
+// ==============================Functions======================================
 
+
+//filtering input data
 function filter() {
 
     if (localName == '' || pizzaName == '' || size == '' ||
@@ -108,6 +111,7 @@ function filter() {
     }
 }
 
+// wathing for persone count ot by min. 1
 function peopleRound() {
     if (peopleCount == 0 || peopleCount == '') {
         peopleCount = 1;
@@ -115,10 +119,15 @@ function peopleRound() {
     return peopleCount;
 }
 
+// removing an intem form the item lisyt, by id
+function removeItem(element) {
+    element.parentNode.parentNode.removeChild(element.parentNode);
+    itemList[element.id].trash = true;
+}
+
 // ==============================New Pizza======================================
 
 const start = () => {
-    let listItem = [];
 
     //submitting the form through click adding new pizza item
     document.querySelector('#button-submit').addEventListener('click', () => {
@@ -129,12 +138,15 @@ const start = () => {
         console.log(condition);
 
         if (condition) {
+            id = itemList.length;
             newPizza = new Pizza(localName, pizzaName, size, price, peopleCount, callPerPerosne, id, trash);
+            itemList.push(newPizza);
+            addItem(newPizza.localName, newPizza.pizzaName, newPizza.size,
+                newPizza.id, newPizza.localName, newPizza.localName);
+            console.log(itemList);
         }
 
-        addItem(newPizza.localName, newPizza.localName, newPizza.localName,
-            newPizza.localName, newPizza.localName, newPizza.localName,
-            newPizza.localName, newPizza.localName);
+        // clearInputs();
     });
 
     //submitting the form through ENTER
@@ -150,11 +162,16 @@ const start = () => {
         clearInputs();
     });
 
-    // deleting  custom card
-    let x = document.querySelector(".gallery_wrapper_element_card-btn");
+    const gallery = document.querySelector('.gallery_wrapper_element_card-btn');
 
-    x.addEventListener('click', (event) => {
+    gallery.addEventListener('click', function(event) {
+        let element = event.target;
+        console.log(element);
+        const elementJOB = event.target.attributes.job.value;
 
+        if (elementJOB == "delete") {
+            removeItem(element);
+        }
     });
 };
 
