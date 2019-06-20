@@ -9,20 +9,28 @@
         flex-wrap: wrap;
         margin: 3rem auto;
         height: auto;
-        width:70%;
+        width:90%;
+        @include respond(tab-port){
+            width:95%;
+        }
 
         &_element {
             position: relative;
             display:block;
-            padding: 3rem;
+            padding: 2rem;
             background-image: linear-gradient(to bottom, $color-3, $color-1);
             background-color: $color-4;
             border-radius: 1rem;
             margin: 2rem 2rem;
-            width: 27rem;
-            min-height: 33rem;
+            width: 23rem;
+            min-height: 30rem;
             height: auto;
             text-align: center;
+
+            @include respond(small-phone){
+                width:100%;
+
+            }
 
             &_card-btn {
                 top: 4%;

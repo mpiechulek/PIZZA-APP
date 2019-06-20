@@ -19,11 +19,13 @@ body {
 
 .header_2 {
     font-size: $fontsize-header-2;
+     text-overflow: ellipsis;
 }
 
 .header_3 {
     font-size: $fontsize-header-3;
     margin-bottom: $marginbottom-small ;
+     text-overflow: ellipsis; 
 }
 
 .paragraph {
