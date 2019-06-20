@@ -20,13 +20,13 @@
     }
 
     &-1{
-        position: relative;
+        position: absolute;
         display: block;
         font-family: 'Pacifico', cursive;
         text-shadow: 5px 5px #000000;
         font-size: $fontsize-header-1;
-        top: 8rem;
-        left: 8rem;
+        top: 10%;
+        left: 10%;
 
         @include respond(phone){
             height: 30vh;
