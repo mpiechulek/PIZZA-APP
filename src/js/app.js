@@ -97,7 +97,7 @@ Pizza.prototype.pizzaAmmount = function() {
 
 //How many callories all the pizzas have
 Pizza.prototype.pizzasCallTotal = function() {
-    return (this.peopleCount * this.onePizzaCall);
+    return (this.pizzaAmmount * this.onePizzaCall);
 };
 
 //Pizzas total price
@@ -220,7 +220,7 @@ function submitting() {
         //finding the lowest cost
         // lowestCost(itemList);
 
-        //adding a new pizza ofer card to the gallry
+        //adding a new pizza offer card to the gallery
         addItem(newPizza.localName, newPizza.pizzaName, newPizza.peopleCount, newPizza.pizzaAmmount, newPizza.size,
             newPizza.pizzasCallTotal, newPizza.totalPrice, newPizza.bestOffer, newPizza.id);
 

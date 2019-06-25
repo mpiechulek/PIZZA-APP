@@ -21,7 +21,7 @@
             background-image: linear-gradient(to bottom, $color-3, $color-1);
             background-color: $color-4;
             border-radius: 1rem;
-            margin: 2rem 2rem;
+            margin: 2rem;
             width: 23rem;
             min-height: 30rem;
             height: auto;
@@ -56,4 +56,12 @@
     font-weight: 800;
     color: $color-4;
     text-shadow: 2px 1px 1px rgba(0, 0, 0, 1);
+}
+
+.card-head {
+    margin-top: 3rem;
+}
+
+.hidden {
+    overflow: hidden;
 }
