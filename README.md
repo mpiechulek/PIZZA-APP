@@ -4,15 +4,15 @@
 
 Users guide:
 
-1.Enter a pizza size between 20 and 50cm.
-2.Enter the pizzas price.
-3.Enter the ammount of people that will join the meal.
-4.Enter the callorie ammount per person to consume.
-5.Enter the pizza local name.
-6.Enter the pizza name (margarita).
-7.Press calculate to add pizza ofer card to board.
-8.Press clear to reset the form.
-9.Add a nother pizza ofer.
-10.To delete the offer prez "x" mark on the card right corn
+  1.Enter a pizza size between 20 and 50cm.
+  2.Enter the pizzas price.
+  3.Enter the ammount of people that will join the meal.
+  4.Enter the callorie ammount per person to consume.
+  5.Enter the pizza local name.
+  6.Enter the pizza name (margarita).
+  7.Press calculate to add pizza ofer card to board.
+  8.Press clear to reset the form.
+  9.Add a nother pizza ofer.
+  10.To delete the offer prez "x" mark on the card right corn
 
 Link:  https://mpiechulek.github.io/PIZZA-APP/
