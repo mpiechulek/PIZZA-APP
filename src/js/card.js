@@ -6,13 +6,6 @@ export const addItem = (localName, pizzaName, people, ammount, size, calls, pric
 
     let phrase = people === 1 ? 'persone' : 'persones';
 
-    var n = localName.length;
-
-    if (n > 8) {
-
-    }
-
-
     let content = `<div class="gallery_wrapper_element " id=${id}>
                         <label class = "gallery_wrapper_element_card-btn" job="delete" id ="${id}">X</label>
                         <h3 class="header_3 card-head hidden">${localName}</h3>
